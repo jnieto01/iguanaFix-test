@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Iguanafix</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript" src="javascript/jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="javascript/bootstrap/js/bootstrap.min.js"></script>
+<link href="stylesheet/bootstrap.css" type="text/css" rel="stylesheet" />
+<link href="javascript/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+<link type="text/css" href="stylesheet/stylesheet.css" rel="stylesheet" media="screen" />
+<script src="javascript/common.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+  <div class="container-fluid myheader">
+    <div class="container">
+      <nav class="navbar">
+        <div class="navbar-header">
+          <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars fa-2x"></i></button>
+          <a class="navbar-brand" href="#"><img src="http://localhost/img/logo.png" alt="iguanafix"  class="img-responsive" /></a>       
+          <span class="pull-left hidden-xs hidden-sm"><i class="fa fa-phone"></i> 0810-220-6173</span>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Casa</a></li> 
+            <li><a href="#">Auto</a></li>
+            <li><a href="#">Empresas</a></li>
+            <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ingresar <i class="fa fa-user"></i></a>
+              <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="#">Ingresar</a></li>
+              </ul> 
+            </li>   
+          </ul>    
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div id="loading"></div>
+
+<div class="container">
+    <ul class="breadcrumb">
+        <li><a href="#">CONTRATAR UN SERVICIO > INSTALACION DE AIRE ACONDICIONADO</a></li>
+    </ul>   
+
+    <div class="row product">
+        <!-- carrusel de imagen del producto -->
+        <div class="col-md-2">
+            <ul class="thumbnails" id="additionalPicture"></ul>
+        </div>    
+        <div class="col-md-4 main-picture"> 
+           <img id="" src="" alt="" title="" class="mainPicture"/>
+        </div>
+
+        <!--   datos del producto -->
+        <div class="col-md-4" id="product-information">
+            <div class="form-group">
+                <h3>Instalacion de aire acondicionado split.</h3>
+                <p class="price" id="price"></p>
+                <div class="product-include">Frigorias</div>
+
+
+                <select id="itemOthers"></select>
+
+                <div class="row">
+                    <div class="col-md-5">    
+                        <div class="item-number">
+                            <div class="input-group">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </button>
+                                </span>                            
+                                <input type="text" name="quant[1]" class="form-control input-number text-center" value="01" min="1" max="100" id="itemCantidad">                   
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </span>
+ 
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 item-unit">    
+                        <span id="itemUnit"></span>
+                    </div>
+
+                </div>
+
+                <div class="visita">
+                    <button type="button" id="button-visita" data-loading-text="Cargando..." class="btn btn-pink btn-lg ">PROGRAMAR VISITA</button>
+                </div>
+
+                <div class="product-include">Que incluye</div>
+
+                <ul class="list-unstyled include-list">
+                    <li><i class="fa fa-check"></i> Desinstalacion del equipo anterior.</li>
+                    <li><i class="fa fa-check"></i> Colocacion de nuevo equipo: unidad interior y exterior.</li>
+                    <li><i class="fa fa-check"></i> Colocacion de drenaje. </li>
+                </ul>      
+               
+                <hr class="product-line"> 
+            </div>    
+        </div>
+    </div>
+
+
+    <div class="container-servicio center-block">
+
+            <!-- detalles del producto -->
+            <div class="mytabs">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#details"  role="tab" data-toggle="tab">Detalles del servicio</a>
+                    </li>
+
+                    <li role="presentation">
+                        <a href="#not-include"  role="tab" data-toggle="tab">Que no incluye</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="tab-content">
+                <div id="details" class="tab-pane active" role="tabpanel">                  
+                    <p> Colocacion del nuevo equipo: unidad interior (hasta 2,5 mts de altura, incluído el taparroyos) y exterior (en lugares 
+                        accesibles, hasta 2,5 mts de altura). Colocacion de drenaje. Presuriazacion, vacio y control de carga. Ménsulas 
+                         estandar. Caneria de interconexion hasta 3 mts (3 mts de cano de cobre 1/2 o 1/4, 3 mt_srand
+                         de cable tipo taller - 5 1/2, 3 mts de manguera de desague para drenaje, cinta PVC, Kit de tornillos
+                         y/o canos equivalentes segun el equipo). Prueba del equipo. Limpieza del lugar</p>
+                         
+                         <p> Colocacion del nuevo equipo: unidad interior (hasta 2,5 mts de altura, incluído el taparroyos) y exterior (en lugares 
+                        accesibles, hasta 2,5 mts de altura). Colocacion de drenaje. Presuriazacion, vacio y control de carga. Ménsulas 
+                         estandar. Caneria de interconexion hasta 3 mts (3 mts de cano de cobre 1/2 o 1/4, 3 mt_srand
+                         de cable tipo taller - 5 1/2, 3 mts de manguera de desague para drenaje, cinta PVC, Kit de tornillos
+                         y/o canos equivalentes segun el equipo). Prueba del equipo. Limpieza del lugar</p>
+                </div>
+
+                <div id="not-include" class="tab-pane" role="tabpanel">
+                   <p> Informacion de lo que no incluye este servicio</p>                       
+               
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <!-- // productos relacionados -->
+            <div class="row" id="itemRelated"></div>
+    </div> 
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="#"><img src="http://localhost/img/logofooter.png" alt="IguanaFix" class="img-responsive"/></a>
+            </div>
+
+            <div class="col-md-10">
+                <ul class="list-unstyled list-inline pull-right icons-social">
+                    <li><a href="#" target="_blank"><i class="fa fa-facebook fa-2x social-color"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-instagram fa-2x social-color"></i></a></li>                  
+                    <li><a href="#" target="_blank"><i class="fa fa-google-plus fa-2x social-color"></i></a></li>                 
+                    <li><a href="#" target="_blank"><i class="fa fa-youtube fa-2x social-color"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-twitter fa-2x social-color"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fa fa-envelope-o fa-2x social-color"></i></a></li>        
+                </ul>
+            </div>
+            
+        </div>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="categorias"></div>
+
+                <!--
+                <?php  foreach ($categorias as $categoria) { ?>
+                <div id="categorias">
+                    <h4 class="stroke"><?php echo $categoria; ?></h4>
+                    <hr class="footer-line1">
+                    <hr class="footer-line2">
+                    
+                    <ul class="list-unstyled">  
+                        <?php  foreach ($subcategorias as $subcategoria) { ?>
+                        <li class="col-sm-3">
+                            <a href="#" class="stroke"><?php echo $subcategoria; ?></a>
+                        </li>
+                        <?php } ?>     
+                    </ul>
+                </div>
+                --> 
+                <br>    
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 copyright">
+                    &copy; Copyright 2016. All rights reserved | IguanaFix
+                </div>
+
+                <div class="col-xs-4">
+                    <ul class="list-unstyled list-inline">
+                        <li class="app-store">
+                            <a href="#" target="_blank"><img src="http://localhost/img/googleplay.png" class="img-responsive" alt="Google Play Store"/></a>
+                        </li>
+                        <li class="app-store">
+                            <a href="#" target="_blank"><img src="http://localhost/img/applestore.png" class="img-responsive" alt="App Store"/></a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank"><img src="http://localhost/img/fiscal.png" class="img-responsive" alt="AFIP"/></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+</body></html>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){ 
+        var price; 
+        var id;
+
+        $(".loading").html("<div class='loader text-center'></div><br><p>Cargando datos</p></div>");
+        //--------- CONSULTA DE DATOS EXTERNOS -----------------      
+        // imagen del producto
+        $.ajax({
+            type: "GET",
+            url: "https://private-70cb45-aobara.apiary-mock.com/product/1/photos",				 
+            success:function(data){
+                // main picture
+                $(".mainPicture").attr("src",data[0].url);
+                $(".mainPicture").attr("id","img" + data[0].id);
+                
+
+                // additional picture
+                $("#additionalPicture").html("");
+                $.each( data, function( key, value ) {
+                    if (key > 0){
+                        $("#additionalPicture").append("<li><a class='thumbnail' href='#' title='' onclick='cambiarImg(" + value.id + ")'><img src='" + value.url +  "' title='' alt='' id='img" + value.id + "'/></a></li>");                   
+                    }
+                });
+            }
+        });
+
+        // continuar cargando imagenes
+        $.ajax({
+            type: "GET",
+            url: "https://private-70cb45-aobara.apiary-mock.com/product/2/photos",				 
+            success:function(data){          
+                // additional picture
+                $.each( data, function( key, value ) {
+                    $("#additionalPicture").append("<li><a class='thumbnail' href='#' title='' onclick='cambiarImg(" + value.id + ")'><img src='" + value.url +  "' title='' alt='' id='img" + value.id + "' /></a></li>");                   
+                });
+          }
+        });
+
+        // datos del productos
+        $.ajax({
+            type: "GET",
+            url: "https://private-70cb45-aobara.apiary-mock.com/product/list",				 
+            success:function(data){
+                var items;
+
+                id = data[0].id;
+                price = data[0].unitPriceInCents / 100 ; // Inicializa data 
+ 
+   
+                items = '';
+                $.each( data, function( key, value ) {
+                //  items = items +  "<li><a href='#'>" + value.description + "</a></li>";
+                    if (key === 0){
+                         "<option value='" + value.description + "'>" + value.description + " selected </option>";
+                    }
+                    items = items +  "<option value='" + value.description + "'>" + value.description + "</option>";
+                });
+
+
+                $("#itemOthers").html(items);
+                $("#itemCantidad").attr("min",data[0].minQuantity);
+                $("#itemCantidad").attr("value",data[0].minQuantity);
+                $("#itemUnit").html(data[0].unit);
+
+                $("#price").html("$ " + (price * data[0].minQuantity)); 
+          }
+        });
+
+        // productos relacionados
+        $.ajax({
+            type: "GET",
+            url: "https://private-70cb45-aobara.apiary-mock.com/related-product/list",				 
+            success:function(data){
+                var cad = '';
+
+                $("#itemRelated").html("");
+                $.each( data, function( key, value ) {
+  
+                    cad = cad + "<div class='col-md-4'><div class='thumbnail'>"; 
+                    cad = cad + "<a href=''><img src='" + value.pictureUrl  + "' alt='' title='' class='img-responsive' width='260' height='60' id='" + value.id + "'/></a>"; 
+                    cad = cad + "<div class='caption'><h3>" + value.title  + "</h3>";
+                    cad = cad + "<div class='related-pay'><i class='fa fa-credit-card'></i> desde $ " + value.fromPrice / 100 + "</div>";
+                    cad = cad + "<p class='desc-related'>" + value.description + "</p>";
+                    cad = cad + "<div class='button-related text-right'><input type='button' onclick='location.href=";
+                    cad = cad + '"#"';
+                    cad = cad + "' value='CONTRATAR'/></div></div></div>";
+                    
+                    $("#itemRelated").append(cad); 
+                    cad = '';                   
+                });
+
+            }
+        });
+
+   //-- carda datos de categorias en el footer ----     
+   var categorias = ["Casa", "Autos"];                                
+    var subcategorias = ["Albañileria", "Albañileria","Albañileria","Albañileria","Albañileria",
+            "Albañileria","Albañileria","Albañileria","Albañileria","Albañileria","Albañileria","Albañileria"];
+
+    categoriasDiv = document.getElementById("categorias");
+
+    categorias.forEach(function(mainCat) {
+        categoriasDiv.innerHTML = categoriasDiv.innerHTML + "<h4 class='stroke'>" + mainCat + "</h4>";
+        categoriasDiv.innerHTML = categoriasDiv.innerHTML + "<hr class='footer-line1'>";
+        categoriasDiv.innerHTML = categoriasDiv.innerHTML + "<hr class='footer-line2'>";
+ 
+        subcategorias.forEach(function(subCat) {
+            categoriasDiv.innerHTML = categoriasDiv.innerHTML + "<ul class='list-unstyled' id='subcategorias'>";                     
+            categoriasDiv.innerHTML = categoriasDiv.innerHTML + "<li class='col-sm-3'><a href='#' class='stroke'>" + subCat + "</a></li></ul>";
+        });
+    }); 
+
+
+
+    $(".loading").html("");
+
+
+    //------------------- FUNCIONES INTERNAS  ---------------------------    
+
+    //--envia al back end los datos para procesar la programacion de la visita
+    /*
+    $('#button-visita').on('click', function() {
+	    $.ajax({
+		    url: '',
+		    type: 'post',
+		    data: $(''),
+		    dataType: 'json',
+		    success: function(json) {
+
+            }
+	    });
+    });
+    */
+
+
+    $('#itemOthers').change(function() {
+        // datos del productos
+        $.ajax({
+            type: "GET",
+            url: "https://private-70cb45-aobara.apiary-mock.com/product/list",				 
+            success:function(data){
+                var items;
+                var tipo = $('#itemOthers').val();
+
+                $.each( data, function( key, value ) {
+                    if (tipo === value.description){
+                        id = value.id;
+                        price = value.unitPriceInCents / 100 ; // Inicializa data 
+                        $("#itemCantidad").attr("min",value.minQuantity);
+                        $("#itemCantidad").attr("value",value.minQuantity);
+
+                        $("#price").html("$ " + (price * value.minQuantity)); 
+
+                    }
+                });
+            }
+        });
+
+    });
+
+
+    $('.btn-number').click(function(e){
+        e.preventDefault();
+    
+        fieldName = $(this).attr('data-field');
+        type      = $(this).attr('data-type');
+        var input = $("input[name='"+fieldName+"']");
+        var currentVal = parseInt(input.val());
+        if (!isNaN(currentVal)) {
+            if(type == 'minus') {
+                if(currentVal > input.attr('min')) {
+                    input.val(currentVal - 1).change();
+                    $("#price").html("$ " +  ((currentVal - 1) * price)); 
+                } 
+                if(parseInt(input.val()) == input.attr('min')) {
+                    $(this).attr('disabled', true);
+                }
+            } else if(type == 'plus') {
+
+                if(currentVal < input.attr('max')) {
+                    input.val(currentVal + 1).change();
+                    $("#price").html("$ " +  ((currentVal + 1) * price)); 
+                }
+                if(parseInt(input.val()) == input.attr('max')) {
+                    $(this).attr('disabled', true);
+                }
+            }
+        } else {
+            input.val(1);
+        }
+    });
+
+    $('.input-number').focusin(function(){
+        $(this).data('oldValue', $(this).val());
+    });
+
+    $('.input-number').change(function() {
+    
+        minValue =  parseInt($(this).attr('min'));
+        maxValue =  parseInt($(this).attr('max'));
+        valueCurrent = parseInt($(this).val());
+    
+        name = $(this).attr('name');
+        if(valueCurrent >= minValue) {
+            $(".btn-number[data-type='minus'][data-field='"+name+"']").removeAttr('disabled')
+        } else {
+            alert('Sorry, the minimum value was reached');
+            $(this).val($(this).data('oldValue'));
+        }
+        if(valueCurrent <= maxValue) {
+            $(".btn-number[data-type='plus'][data-field='"+name+"']").removeAttr('disabled')
+        } else {
+            alert('Sorry, the maximum value was reached');
+            $(this).val($(this).data('oldValue'));
+        }
+    });
+
+    $(".input-number").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+             // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) || 
+             // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+                 // let it happen, don't do anything
+                 return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
+});	
+</script>
+
+<script>
+function cambiarImg(id){
+    
+    var srcMain = $(".mainPicture").attr("src");
+    var idMain = $(".mainPicture").attr("id"); 
+
+    console.log(idMain);
+
+    $(".mainPicture").attr("src",$("#img" + id).attr("src"));
+    $(".mainPicture").attr("id","img" + id); 
+
+    $("#img" + id).attr("src",srcMain);
+    $("#img" + id).attr("id",idMain);
+        
+}
+</script>
